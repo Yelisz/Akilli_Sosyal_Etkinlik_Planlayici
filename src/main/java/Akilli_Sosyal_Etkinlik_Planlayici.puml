@@ -1,0 +1,51 @@
+@startuml
+class Kullanıcı {
+    + id: int
+    + ad: String
+    + soyad: String
+    + email: String
+    + etkinlikOluştur()
+    + etkinlikYönet()
+}
+
+class Etkinlik {
+    + id: int
+    + başlık: String
+    + tarih: Date
+    + saat: Time
+    + konum: String
+    + katılımcılar: List<Kullanıcı>
+    + davetGönder()
+    + güncelle()
+    + sil()
+}
+
+class Davet {
+    + id: int
+    + etkinlik: Etkinlik
+    + gönderen: Kullanıcı
+    + alıcı: Kullanıcı
+    + durum: String
+}
+
+class Takvim {
+    + id: int
+    + etkinlikler: List<Etkinlik>
+    + hatırlatmaEkle()
+    + öneriGöster()
+}
+
+class Harita {
+    + konumGetir(String adres): String
+}
+
+class HavaDurumu {
+    + havaDurumuGetir(String konum): String
+}
+
+Kullanıcı --> Etkinlik : "oluşturur / yönetir"
+Etkinlik --> Davet : "davetleri içerir"
+Takvim --> Etkinlik : "etkinlikleri içerir"
+Etkinlik --> HaritaServisi : "konum alır"
+Etkinlik --> HavaDurumuServisi : "hava durumu alır"
+@enduml
