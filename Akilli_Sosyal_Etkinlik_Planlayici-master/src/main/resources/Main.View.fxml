@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="421.0" prefWidth="649.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.example.MainController">
+    <TableView fx:id="etkinlikTablosu" layoutX="25.0" layoutY="22.0" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="baslikSutun" prefWidth="150" text="Başlık" />
+            <TableColumn fx:id="tarihSutun" prefWidth="150" text="Tarih" />
+            <TableColumn fx:id="saatSutun" prefWidth="150" text="Saat" />
+            <TableColumn fx:id="konumSutun" prefWidth="150" text="Konum" />
+        </columns>
+    </TableView>
+
+    <HBox layoutX="50" layoutY="360" spacing="10" />
+
+    <VBox layoutX="24.0" layoutY="371.0" prefHeight="46.0" prefWidth="600.0" spacing="10">
+        <Label text="Hava Durumu:" />
+        <Label fx:id="havaDurumuLabel" text="Hava durumu bilgisi yükleniyor..." />
+    </VBox>
+     <Button layoutX="531.0" layoutY="339.0" text="Tabloyu Yenile" />
+     <Button layoutX="238.0" layoutY="339.0" text="Etkinlik Sil" />
+     <Button layoutX="120.0" layoutY="339.0" text="Etkinlik Düzenle" />
+     <Button layoutX="25.0" layoutY="339.0" text="Etkinlik Ekle" />
+</AnchorPane>

@@ -1,0 +1,19 @@
+@startuml
+class java.lang.Number{
++byteValue(): byte
++shortValue(): short
++intValue(): int
++longValue(): long
++floatValue(): float
++doubleValue(): double
+}
+java.lang.Number --|> Double
+java.lang.Number --|> Float
+java.lang.Number --|> Long
+java.lang.Number --|> Integer
+java.lang.Number --|> Short
+java.lang.Number --|> Byte
+java.lang.Number --|> BigInteger
+java.lang.Number --|> BigDecimal
+
+@enduml

@@ -1,0 +1,14 @@
+//- private, + public
+@startuml
+class Stack{
+    -elements: int[]
+    -size: int
+    +StackOfInt
+    +StackOfIntegers(capacity: int)
+    +empty(): boolean
+    +peek(): int
+    +push (value: int): void
+    +pop(): int
+    +getSize(): int
+}
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+class Student {
+    - courseList: Course[]
+    + addCourse(Course)
+}
+
+class Course {
+    - classList: Student[]
+    - faculty: Faculty
+    + addStudent(Student)
+    + setFaculty(Faculty)
+}
+
+class Faculty {
+    - courseList: Course[]
+    + addCourse(Course)
+}
+
+Student "5..60" -- "0..3" Course : Take
+Course "1" -- "1" Faculty : Teach
+@enduml
